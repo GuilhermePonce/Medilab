@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" th:action="@{/}" th:object="${userInfo}">
+  <input id="firstName" placeholder="Enter First Name" required th:field="*{firstName}" type="text"/>
+  <input id="lastName" placeholder="Enter Last Name" required th:field="*{lastName}" type="text"/>
+  <select id="role" required th:field="*{role}">
+    <option hidden value="">Select a role</option>
+    <option>GUEST</option>
+    <option>USER</option>
+    <option>ADMIN</option>
+  </select>
+  <input type="submit" value="Create Usuario">
+  <input type="reset" value="Reset">
+</form>
+
+</body>
+</html>
